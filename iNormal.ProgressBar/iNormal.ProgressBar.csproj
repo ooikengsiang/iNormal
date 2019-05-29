@@ -37,8 +37,6 @@ A progress bar which can perform determinate progress and indeterminate progress
     </MtouchLink>
     <MtouchArch>
     </MtouchArch>
-    <SignAssembly>false</SignAssembly>
-    <DelaySign>false</DelaySign>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
