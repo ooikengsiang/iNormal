@@ -3,6 +3,8 @@ Code auto layout in Xamarin iOS using fluent interface and reduce many boilerpla
 
 Knowledge on how auto layout work in iOS is still required. Fluent auto layout just help developer to write a shorter and cleaner code that accomplish the same thing.
 
+[![nuget badget](https://img.shields.io/nuget/v/iNormal.FluentAutoLayout.svg)](https://www.nuget.org/packages/iNormal.FluentAutoLayout/)
+
 ## Sample
 Without fluent auto layout
 ```C#
