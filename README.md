@@ -3,6 +3,7 @@ A collection of Xamarin.iOS library written in C# that help simplify iOS develop
 
 ## [Progress Bar](./iNormal.ProgressBar)
 A really normal progress bar that function like a normal progress bar. A progress bar which can perform determinate progress and indeterminate progress.
+
 ![progress bar indeterminate](./iNormal.ProgressBar/ProgressBarIndeterminateDemo.gif "Logo Title Text 1")
 
 ## [Fluent Auto Layout](./iNormal.FluentAutoLayout)
