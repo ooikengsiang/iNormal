@@ -4,11 +4,11 @@ A collection of Xamarin.iOS library written in C# that help simplify iOS develop
 ## [Progress Bar](./iNormal.ProgressBar)
 A really normal progress bar that function like a normal progress bar. A progress bar which can perform determinate progress and indeterminate progress.
 
-![progress bar indeterminate](./iNormal.ProgressBar/ProgressBarIndeterminateDemo.gif "Logo Title Text 1")
+![progress bar indeterminate](./iNormal.ProgressBar/ProgressBarIndeterminateDemo.gif)
 
 ## [Fluent Auto Layout](./iNormal.FluentAutoLayout)
 Code auto layout using fluent interface and reduce many boilerplate code required for a simple layout.
-```
+```C#
 NameView = new UIView()
 {
     TranslatesAutoresizingMaskIntoConstraints = false
