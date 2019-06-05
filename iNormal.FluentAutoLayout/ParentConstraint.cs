@@ -51,6 +51,22 @@ namespace iNormal.FluentAutoLayout
         }
 
         /// <summary>
+        /// A helper function that create a new constraint, add to given view and return the parent constraint to continue the chain method.
+        /// </summary>
+        private ParentConstraint AddNewConstraintToParent(UIView view, NSLayoutAttribute viewAttribute, NSLayoutRelation relation, UIView target, NSLayoutAttribute targetAttribute, float multiplier, float constant, float priority)
+        {
+            // create a new constraint
+            var constraint = NSLayoutConstraint.Create(view, viewAttribute, relation, target, targetAttribute, multiplier, constant);
+            constraint.Priority = priority;
+
+            // add the new constraint to parent
+            target.AddConstraint(constraint);
+
+            // continue the chain
+            return this;
+        }
+
+        /// <summary>
         /// Create a new height constraint.
         /// </summary>
         public ParentConstraint Height(NSLayoutRelation relation, float multiplier = 1f, float constant = 0f, float priority = Priority.Required)
@@ -67,6 +83,15 @@ namespace iNormal.FluentAutoLayout
         }
 
         /// <summary>
+        /// Create a new height constraint with given parent view where the contraint should be added.
+        /// Use this only if the view is not under the same parent view.
+        /// </summary>
+        public ParentConstraint HeightToParent(NSLayoutRelation relation, UIView target, NSLayoutAttribute attribute, float multiplier = 1f, float constant = 0f, float priority = Priority.Required)
+        {
+            return AddNewConstraintToParent(View, NSLayoutAttribute.Height, relation, target, attribute, multiplier, constant, priority);
+        }
+
+        /// <summary>
         /// Create a new width constraint.
         /// </summary>
         public ParentConstraint Width(NSLayoutRelation relation, float multiplier = 1f, float constant = 0f, float priority = Priority.Required)
@@ -80,6 +105,15 @@ namespace iNormal.FluentAutoLayout
         public ParentConstraint Width(NSLayoutRelation relation, NSObject target, NSLayoutAttribute attribute, float multiplier = 1f, float constant = 0f, float priority = Priority.Required)
         {
             return AddNewConstraint(View, NSLayoutAttribute.Width, relation, target, attribute, multiplier, constant, priority);
+        }
+
+        /// <summary>
+        /// Create a new width constraint with given parent view where the contraint should be added.
+        /// Use this only if the view is not under the same parent view.
+        /// </summary>
+        public ParentConstraint WidthToParent(NSLayoutRelation relation, UIView target, NSLayoutAttribute attribute, float multiplier = 1f, float constant = 0f, float priority = Priority.Required)
+        {
+            return AddNewConstraintToParent(View, NSLayoutAttribute.Width, relation, target, attribute, multiplier, constant, priority);
         }
 
         /// <summary>
