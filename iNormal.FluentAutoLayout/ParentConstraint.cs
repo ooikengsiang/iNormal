@@ -192,6 +192,15 @@ namespace iNormal.FluentAutoLayout
         /// <summary>
         /// Set content hugging priority.
         /// </summary>
+        public ParentConstraint ContentHugging(float priority, UILayoutConstraintAxis axis)
+        {
+            View.SetContentHuggingPriority(priority, axis);
+            return this;
+        }
+
+        /// <summary>
+        /// Set content hugging priority.
+        /// </summary>
         public ParentConstraint Hugging(float priority, UILayoutConstraintAxis axis)
         {
             View.SetContentHuggingPriority(priority, axis);
