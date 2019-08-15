@@ -20,7 +20,8 @@ or
 ```C#
 var progressBar = new ProgressBar();
 progressBar.Value = 50;
-progressBar.Max = 100;
+progressBar.Minimum = 0;
+progressBar.Maximum = 100;
 ```
 
 ![progress bar determinate](./ProgressBarDeterminateDemo.gif)
